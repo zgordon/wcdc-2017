@@ -55,18 +55,24 @@
         markup += '</div>';
         return markup;
     }
-    
+
     function handleShowPost( event ) {
+
         event.preventDefault();
+
         if ( false === visible ) {
+
             article.innerHTML = createPostMarkup();
             mainContent.appendChild( article );
             showContentLink.innerText = 'Hide Post';
             visible = true;
+
         } else {
+
             article.remove();
             showContentLink.innerText = 'Show Post';
             visible = false;
+
         }
     }
 
