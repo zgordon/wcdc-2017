@@ -52,15 +52,17 @@
 <script>
 
     //  Practice
-    //  1.  Select the parent element for the post title
+    //  0.  Open in the browser, select the first h2 with inspector and
+    //      view its properties, including children and parents
+    //  1.  Select the parent element for the first post title
     //  2.  Select the first post, then log out then get the next sibling
     //  3.  Select the #main container and log out the children
 
-    const postParent = document.querySelector('article').parentElement,
-        firstPost = document.querySelector('article'),
-        mainContainer = document.getElementById('main');
+    const firstPostParent = document.querySelector('article').parentElement,
+          firstPost = document.querySelector('article'),
+          mainContainer = document.getElementById('main');
 
-    console.log('Post parent: ', postParent);
+    console.log('Post parent: ', firstPostParent);
     console.log('First post sibling: ', firstPost.nextElementSibling);
 
     console.log('#main Children:');

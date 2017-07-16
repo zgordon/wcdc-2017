@@ -59,11 +59,13 @@
 
     let mainContainer = document.getElementById( 'main' ),
         firstPost = document.querySelector( 'article' ),
-        newPost = firstPost.cloneNode( true );
-        newLink = newPost.querySelector( 'a' );
+        newPost = firstPost.cloneNode( true ),
+        newLink = newPost.querySelector( 'a' ),
+        newContent = newPost.querySelector( '.entry-content' );
 
     newLink.href = '#new-link';
-    newLink.innerText = 'New Title';
+    newLink.innerText = 'New Post';
+    newContent.innerHTML = '<p>New Post Content</p>';
 
     mainContainer.appendChild( newPost );
     firstPost.remove();
